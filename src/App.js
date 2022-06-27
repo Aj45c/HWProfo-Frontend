@@ -1,17 +1,21 @@
-import './App.css';
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import { Route, Switch } from "react-router-dom";
+import "./App.css";
+
+// IMPORT COMPONENTS
+import Header from "./Components/Header";
+import Footer from "./Components/Footer";
+import { Route} from "react-router-dom";
+// IMPORT PAGES
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
 
 function App() {
-  const URL = 'http://localhost:4000/';
+
+  const URL = "https://hwprofo.herokuapp.com/";
+
   return (
     <div className="App">
       <Header />
-      <Switch>
         <Route exact path="/">
           <Home />
         </Route>
@@ -21,7 +25,6 @@ function App() {
         <Route path="/about">
           <About URL={URL} />
         </Route>
-      </Switch>
       <Footer />
     </div>
   );
